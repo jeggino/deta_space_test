@@ -7,11 +7,11 @@ import mysql.connector
 # Initialize connection.
 # Uses st.cache_resource to only run once.
 def init_connection():
-    return mysql.connector.connect('host'= 'localhost', 
-                                   'port'= 3306, 
-                                   'database'= 'pets', 
-                                   'user'= 'root', 
-                                   'password'= 'Platinum79')
+    return mysql.connector.connect(host= 'localhost', 
+                                   port= 3306, 
+                                   database= 'pets', 
+                                   user= 'root', 
+                                   password= 'Platinum79')
 st.write(st.secrets["mysql"])
 conn = init_connection()
 
