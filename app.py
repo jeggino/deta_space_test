@@ -9,6 +9,6 @@ import pandas as pd
 deta = Deta(st.secrets["deta_key"])
 
 # Create a new database
-db = deta.Base("project_fietskliniek")
+db = deta.Base("fietskliniek_project")
 
 st.dataframe(db)
