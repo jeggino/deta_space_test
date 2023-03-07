@@ -3,22 +3,25 @@
 import streamlit as st
 import mysql.connector
 
-# Initialize connection.
-# Uses st.cache_resource to only run once.
-def init_connection():
-    return mysql.connector.connect(**st.secrets["mysql"])
+a = **st.secrets["mysql"]
 
-conn = init_connection()
+st.write(a)
+# # Initialize connection.
+# # Uses st.cache_resource to only run once.
+# def init_connection():
+#     return mysql.connector.connect(**st.secrets["mysql"])
 
-# Perform query.
-# Uses st.cache_data to only rerun when the query changes or after 10 min.
-def run_query(query):
-    with conn.cursor() as cur:
-        cur.execute(query)
-        return cur.fetchall()
+# conn = init_connection()
 
-rows = run_query("SELECT * from mytable;")
+# # Perform query.
+# # Uses st.cache_data to only rerun when the query changes or after 10 min.
+# def run_query(query):
+#     with conn.cursor() as cur:
+#         cur.execute(query)
+#         return cur.fetchall()
 
-# Print results.
-for row in rows:
-    st.write(f"{row[0]} has a :{row[1]}:")
+# rows = run_query("SELECT * from mytable;")
+
+# # Print results.
+# for row in rows:
+#     st.write(f"{row[0]} has a :{row[1]}:")
