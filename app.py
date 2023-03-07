@@ -3,7 +3,7 @@
 import streamlit as st
 import mysql.connector
 
-a = (**st.secrets["mysql"])
+a = (st.secrets["mysql"])
 
 st.write(a)
 # # Initialize connection.
