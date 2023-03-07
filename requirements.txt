@@ -1,3 +1,4 @@
 streamlit
 deta
 pandas
+mysql-connector-python
