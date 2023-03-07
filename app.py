@@ -7,7 +7,7 @@ import mysql.connector
 # Initialize connection.
 # Uses st.cache_resource to only run once.
 def init_connection():
-    return mysql.connector.connect(host='127.0.0.1',
+    return mysql.connector.connect(host='35.201.127.49',
                                    port= 3306, 
                                    database= 'pets', 
                                    user= 'root', 
