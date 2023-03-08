@@ -20,5 +20,3 @@ mydb = mysql.connector.connect(host=HOST_NAME, database=DATABASE, user=USER, pas
 query = pd.read_sql('SELECT * FROM mytable;' , mydb)
 
 st.dataframe(query)
-
-streamlit_app.py
