@@ -3,6 +3,7 @@
 import streamlit as st
 import pandas as pd
 import mysql.connector
+import toml
 
 # Reading data
 toml_data = toml.load(".streamlit/secrets.toml")
