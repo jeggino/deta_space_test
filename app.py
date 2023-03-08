@@ -6,7 +6,7 @@ import mysql.connector
 import toml
 
 # Reading data
-toml_data = toml.load("secrets.toml")
+toml_data = toml.load(".streamlit/secrets.toml")
 # saving each credential into a variable
 HOST_NAME = toml_data['mysql']['host']
 DATABASE = toml_data['mysql']['database']
