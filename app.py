@@ -3,6 +3,7 @@
 import streamlit as st
 from sqlalchemy import create_engine
 import pandas as pd
+import pymysql
 
 db_connection_str = 'mysql+pymysql://root:Platinum79@127.0.0.1/ebird'
 db_connection = create_engine(db_connection_str)
