@@ -27,5 +27,5 @@ import pandas as pd
 
 db_connection_str = 'mysql+pymysql://root:Platinum79@127.0.0.1/pets'
 db_connection = create_engine(db_connection_str)
-
+st.write(db_connection)
 # df = pd.read_sql('SELECT * FROM mytable', con=db_connection)
