@@ -1,13 +1,22 @@
 # streamlit_app.py
 
 import streamlit as st
-from sqlalchemy import create_engine
 import pandas as pd
-import pymysql
+import tolm
+import mysql-connector-python
 
-db_connection_str = 'mysql+pymysql://root:Platinum79@127.0.0.1/ebird'
-db_connection = create_engine(db_connection_str)
+# Reading data
+toml_data = toml.load("secrets.toml")
+# saving each credential into a variable
+HOST_NAME = toml_data['mysql']['host']
+DATABASE = toml_data['mysql']['database']
+PASSWORD = toml_data['mysql']['password']
+USER = toml_data['mysql']['user']
+PORT = toml_data['mysql']['port']
 
-df = pd.read_sql('SELECT * FROM obs_df', con=db_connection)
+# Using the variables we read from secrets.toml
+mydb = connection.connect(host=HOST_NAME, database=DATABASE, user=USER, passwd=PASSWORD, use_pure=True)
 
-st.dataframe(df)
+query = pd.read_sql('SELECT * FROM mytable;' , mydb)
+
+st.dataframe(query)
