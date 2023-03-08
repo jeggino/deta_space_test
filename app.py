@@ -14,9 +14,10 @@ PASSWORD = toml_data['mysql']['password']
 USER = toml_data['mysql']['user']
 PORT = toml_data['mysql']['port']
 
-# Using the variables we read from secrets.toml
-mydb = mysql.connector.connect(host=HOST_NAME, database=DATABASE, user=USER, passwd=PASSWORD, use_pure=True)
+st.write(PASSWORD)
+# # Using the variables we read from secrets.toml
+# mydb = mysql.connector.connect(host=HOST_NAME, database=DATABASE, user=USER, passwd=PASSWORD, use_pure=True)
 
-query = pd.read_sql('SELECT * FROM mytable;' , mydb)
+# query = pd.read_sql('SELECT * FROM mytable;' , mydb)
 
-st.dataframe(query)
+# st.dataframe(query)
